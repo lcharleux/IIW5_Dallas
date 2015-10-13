@@ -1,0 +1,12 @@
+*.blg
+*.out
+*.brf
+*.spl
+*.bbl
+*.aux
+*.synctex.gz
+*.log
+*.pyc
+*~
+2015_indentation_modeles.pdf
+2015_indentation_modeles_v2.pdf
