@@ -4,7 +4,11 @@
 \usepackage{url}			% For \url
 \usepackage{multirow}
 \usepackage{multicol}
-
+\usepackage[utf8]{inputenc}
+% a font close to that chosen by Elsevier
+\usepackage[bitstream-charter]{mathdesign}
+% for accentuated characters
+\usepackage[T1]{fontenc}
 %%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \graphicspath{{figures/}}	% Root directory of the pictures 
@@ -14,7 +18,7 @@
 
 \definecolor{bordercol}{RGB}{40,40,40}
 \definecolor{headercol1}{RGB}{186,215,230}
-\definecolor{headercol2}{RGB}{80,80,80}
+\definecolor{headercol2}{RGB}{255,255,255}
 \definecolor{headerfontcol}{RGB}{0,0,0}
 \definecolor{boxcolor}{RGB}{255,255,255}
 
@@ -50,7 +54,7 @@
 	boxColorOne=boxcolor,
 	headershape=smallrounded,
 	headerfont=\Large\sf\bf,
-	textborder=none,
+	textborder=roundedsmall,
 	background=none,
 	headerborder=open,
     boxshade=plain,
@@ -61,36 +65,27 @@
 Measuring the contact area by SPM imaging
 }
 {
-L. Charleux, \underline{V. Keryvin}, J.-P. Guin, M. Nivard, J.-C. Sangleb\oe uf
+{\color{red}L. Charleux}, {\color{green}\underline{V. Keryvin}}, {\color{cyan}J.-P. Guin, M. Nivard, J.-C. Sangleb\oe uf}, {\color{blue}Y. Yokoyama}
+
+\begin{small}
+{\color{red}Univ. Savoie Mont Blanc (France)}, {\color{green}Univ. Bretagne Sud (France)}, {\color{cyan}Univ. Rennes 1 (France)}, {\color{blue}Tohoku Univ. Sendai (Japan)}
+\end{small}
+
 }
 {
-\includegraphics[height = 5cm]{symme}
+
+%
+%\includegraphics[height = 1cm]{symme} \includegraphics[height= 1cm]{limatb} \includegraphics[height = 1cm]{ipr}
+
 }
 
-%\headerbox{Abstract}{name=abstract,column=0, span = 4,row=0}
+%\headerbox{Abstract}{name=abstract,column=2, span = 2,row=0}
 %{
 %The determination of the contact area is a key step to derive mechanical properties such as hardness or an elastic modulus by instrumented indentation testing. Two families of procedures are dedicated to extracting this area: on the one hand, \textit{post mortem} measurements that require residual imprint imaging, and on the other hand, direct methods that only rely on the load \textit{vs.} the penetration depth curve. With the development of built-in scanning probe microscopy imaging capabilities such as atomic force microscopy and indentation tip scanning probe microscopy, last generation indentation devices have made systematic residual imprint imaging much faster and more reliable. In this paper, a new \textit{post mortem} method is introduced and further compared to three existing classical direct methods by means of a numerical and experimental benchmark covering a large range of materials. It is shown that the new method systematically leads to lower error levels regardless of the type of material. Pros and cons of the new method \textit{vs.} direct methods are also discussed, demonstrating its efficiency in easily extracting mechanical properties with an enhanced confidence. 
 %}
 
-\headerbox{Method}{ name=method,column=0, span = 4,row=0}
-{
-\begin{multicols}{2}
 
-
-\includegraphics[width=\linewidth]{figure_4}
-
-\includegraphics[width=\linewidth]{figure_8}
-\end{multicols}
-}
-
-\headerbox{Numerical Benchmark}{below = method, name=num_benchmark,column=0, span = 2,row=0}
-{
-
-\includegraphics[width=\linewidth]{figure_2}
-
-}
-
-\headerbox{Experimental Benchmark}{below = method, name=exp_benchmark,column=2, span = 2,row=0}
+\headerbox{Indentation + SPM imaging}{name=materials,column=0, span = 2,row=0}
 {
 
 \includegraphics[width=\linewidth]{figure_3}
@@ -98,21 +93,54 @@ L. Charleux, \underline{V. Keryvin}, J.-P. Guin, M. Nivard, J.-C. Sangleb\oe uf
 }
 
 
-\headerbox{Numerical Confrontation}{below =num_benchmark, name=num_results,column=0, span = 2,row=0}
+\headerbox{Measuring the contact area $A_c$}{ name=method,column=2, span = 2,row=0}
 {
-
-\includegraphics[width=\linewidth]{figure_5}\\
-%
-%\includegraphics[width=\linewidth]{figure_6}
-
+\includegraphics[width=\linewidth]{figure_4}
 }
 
-\headerbox{Experimental Confrontation}{below =exp_benchmark, name=exp_results,column=2, span = 2,row=0}
+\headerbox{The role of $\alpha$}{below= materials, name=alpha,column=0, span = 2,row=0}
+{
+\includegraphics[width=\linewidth]{figure_8}
+}
+%
+%\headerbox{Numerical Benchmark}{below = method, name=num_benchmark,column=0, span = 2,row=0}
+%{
+%
+%\includegraphics[width=\linewidth]{figure_2}
+%
+%}
+%
+%
+%
+%
+\headerbox{Numerical benchmark}{below =method, name=num_results,column=2, span = 2,row=0}
+{
+\begin{center}
+Hollomon 
+\end{center}
+\includegraphics[width=\linewidth]{figure_5}\\
+\begin{center}
+Drucker-Prager
+\end{center}
+\includegraphics[width=\linewidth]{figure_6}
+
+}
+%
+\headerbox{Experimental benchmark}{below =alpha, name=exp_benchmark,column=0, span = 2,row=0}
 {
 
-\includegraphics[width=\linewidth]{figure_7}\\
-%
-%\includegraphics[width=\linewidth]{figure_6}
+\includegraphics[width=\linewidth]{figure_7}
+
+
+}
+\headerbox{References}{below =exp_benchmark, name=refs,column=0, span = 2,row=0}
+{
+\begin{itemize}
+\item \url{https://github.com/lcharleux/spym}
+\item L. Charleux, V. Keryvin, M. Nivard, J.-P. Guin, J.-C. Sanglebœuf, and Y. Yokoyama, “A method for measuring the contact area in instrumented indentation testing by tip scanning probe microscopy imaging” Acta Mater., vol. 70, pp. 249–258,2014.
+\end{itemize}
+
+
 
 }
 
