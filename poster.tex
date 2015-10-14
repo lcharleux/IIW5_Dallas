@@ -96,11 +96,19 @@ Measuring the contact area by SPM imaging
 \headerbox{Measuring the contact area $A_c$}{ name=method,column=2, span = 2,row=0}
 {
 \includegraphics[width=\linewidth]{figure_4}
+
+\begin{center}
+{\large \textbf{Each cross section is tilted by $\alpha$}}
+\end{center}
 }
 
 \headerbox{The role of $\alpha$}{below= materials, name=alpha,column=0, span = 2,row=0}
 {
 \includegraphics[width=\linewidth]{figure_8}
+
+\begin{center}
+{\large \textbf{Best choice: $\alpha = 2.5$\degr}}
+\end{center}
 }
 %
 %\headerbox{Numerical Benchmark}{below = method, name=num_benchmark,column=0, span = 2,row=0}
@@ -116,14 +124,23 @@ Measuring the contact area by SPM imaging
 \headerbox{Numerical benchmark}{below =method, name=num_results,column=2, span = 2,row=0}
 {
 \begin{center}
-Hollomon 
+{\large Hollomon: metallic alloys, power law hardening} 
 \end{center}
-\includegraphics[width=\linewidth]{figure_5}\\
 \begin{center}
-Drucker-Prager
+\includegraphics[width=.83\linewidth]{figure_5}\\
 \end{center}
-\includegraphics[width=\linewidth]{figure_6}
-
+\begin{center}
+{\large Drucker Prager: metallic glasses, pressure sensitivity} 
+\end{center}
+\begin{center}
+\includegraphics[width=.83\linewidth]{figure_6}
+\end{center}
+{\footnotesize
+\begin{description}
+\item[DN]:  M. F. Doerner and W. D. Nix, “A method for interpreting the data from depth-sensing indentation instruments” J. Mater. Res., vol. 1, no. 04, pp. 601–609, 1986.
+\item[OP]: W. C. Oliver and G. M. Pharr, “An improved technique for determining hardness and elastic modulus using load and displacement sensing indentation,” J. Mater. Res., vol. 7, no. 6, pp. 1564–1583, 1992.
+\item[LO]: [J. L. Loubet, J. M. Georges, O. Marchesini, and G. Meille, “Vickers Indentation Curves of Magnesium Oxide (MgO),” J. Tribol., vol. 106, no. 1, p. 43, 1984.
+\end{description}}
 }
 %
 \headerbox{Experimental benchmark}{below =alpha, name=exp_benchmark,column=0, span = 2,row=0}
